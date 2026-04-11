@@ -187,10 +187,13 @@
 
     <script>
         intro = document.getElementById("aud");
-        function play(){
-            if(intro.play()){intro.pause();}
-            else{intro.play();}
-        }
+        function play() {
+    if (intro.paused) {
+        intro.play();
+    } else {
+        intro.pause();
+    }
+}
         // JS for a subtle parallax effect on the container
         document.addEventListener('mousemove', (e) => {
             const container = document.querySelector('.gallery-container');
